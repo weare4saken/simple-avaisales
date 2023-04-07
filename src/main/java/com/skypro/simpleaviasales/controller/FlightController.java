@@ -22,8 +22,7 @@ public class FlightController {
 
     @GetMapping
     public List<FlightDTO> getFlights(FilterDTO filterDTO) {
-        return null;
-//                flightService.(filterDTO);
+        return flightService.getFlightsFiltered(filterDTO);
     }
 
     @GetMapping("/{id}")
