@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - include:
+      file: liquibase/changeset/airport-table.sql
+
+  - include:
+      file: liquibase/changeset/airline-table.sql
+
+  - include:
+      file: liquibase/changeset/flight-table.sql
+
+  - include:
+      file: liquibase/changeset/data.sql
