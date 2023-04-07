@@ -1,5 +1,6 @@
 package com.skypro.simpleaviasales.controller;
 
+import com.skypro.simpleaviasales.dto.FilterDTO;
 import com.skypro.simpleaviasales.dto.FlightDTO;
 import com.skypro.simpleaviasales.model.Flight;
 import com.skypro.simpleaviasales.service.FlightService;
@@ -19,24 +20,11 @@ public class FlightController {
         this.flightService = flightService;
     }
 
-
-    /*@GetMapping
-    public List<FlightDTO> getFlights(@RequestParam(required = false)
-                                        String airlineName,
-                                      @RequestParam(required = false)
-                                        String airportName,
-                                      @RequestParam(required = false)
-                                        String cityName,
-                                      @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-                                        LocalDate departureDate,
-                                      @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-                                        LocalDate arrivalDate) {
-        return flightService.getFlightsFiltered(airlineName,
-                                                airportName,
-                                                cityName,
-                                                departureDate,
-                                                arrivalDate);
-    }*/
+    @GetMapping
+    public List<FlightDTO> getFlights(FilterDTO filterDTO) {
+        return null;
+//                flightService.(filterDTO);
+    }
 
     @GetMapping("/{id}")
     public Flight getFlight(@PathVariable Long id) {

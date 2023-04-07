@@ -14,11 +14,11 @@ public class Flight {
 
     @Id
     private String flightNumber;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Airport departureAirport;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Airport arrivalAirport;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Airline airline;
     private LocalDateTime departureDate;
     private LocalDateTime arrivalDate;
