@@ -20,7 +20,7 @@ public class FlightController {
     }
 
 
-    @GetMapping
+    /*@GetMapping
     public List<FlightDTO> getFlights(@RequestParam(required = false)
                                         String airlineName,
                                       @RequestParam(required = false)
@@ -36,7 +36,7 @@ public class FlightController {
                                                 cityName,
                                                 departureDate,
                                                 arrivalDate);
-    }
+    }*/
 
     @GetMapping("/{id}")
     public Flight getFlight(@PathVariable Long id) {

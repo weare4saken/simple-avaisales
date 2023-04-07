@@ -17,7 +17,8 @@ INSERT INTO airline (name) VALUES
     ('FlyEmirates');
 
 -- changeset weare4saken:6
-INSERT INTO flight (flight_number,
+INSERT INTO flight (
+                    flight_number,
                     departure_airport_id,
                     arrival_airport_id,
                     airline_id,
