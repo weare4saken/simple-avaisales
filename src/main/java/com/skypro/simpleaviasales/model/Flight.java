@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 @Entity
 @Table
@@ -20,7 +20,7 @@ public class Flight {
     private Airport arrivalAirport;
     @ManyToOne
     private Airline airline;
-    private LocalDateTime departureDate;
-    private LocalDateTime arrivalDate;
+    private Instant departureDate;
+    private Instant arrivalDate;
 
 }

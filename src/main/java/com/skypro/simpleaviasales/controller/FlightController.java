@@ -2,12 +2,12 @@ package com.skypro.simpleaviasales.controller;
 
 import com.skypro.simpleaviasales.dto.FilterDTO;
 import com.skypro.simpleaviasales.dto.FlightDTO;
+import com.skypro.simpleaviasales.dto.FullFlightDTO;
 import com.skypro.simpleaviasales.model.Flight;
 import com.skypro.simpleaviasales.service.FlightService;
-import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -25,10 +25,10 @@ public class FlightController {
         return flightService.getFlightsFiltered(filterDTO);
     }
 
-    @GetMapping("/{id}")
-    public Flight getFlight(@PathVariable Long id) {
-        return flightService.getFlightById(id);
+    @GetMapping("/{flightNumber}")
+    public ResponseEntity<FullFlightDTO>  getFlight(@PathVariable String flightNumber) {
+        Flight flight = flightService.getFlightByFlightNumber(flightNumber);
+        return ResponseEntity.ok(FullFlightDTO.from(flight));
     }
-
 
 }
