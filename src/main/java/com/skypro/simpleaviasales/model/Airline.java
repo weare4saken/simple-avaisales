@@ -1,7 +1,5 @@
 package com.skypro.simpleaviasales.model;
 
-
-
 import lombok.Getter;
 import lombok.Setter;
 
